@@ -60,9 +60,6 @@ public class CSVTextReplacer {
         
         reader.close();
         
-        //String theData = builder.toString().replace("\r\n", " ").replace("\n", " ");
-        
-        //
         File fileNew = Paths.get(System.getProperty("user.dir")).resolve("data").resolve(fileNameOutput).toFile();
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileNew))) {
         writer.write(builder.toString());
